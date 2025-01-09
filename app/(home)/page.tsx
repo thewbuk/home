@@ -9,29 +9,16 @@ import {
   CardDescription,
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { ScrollArea } from '@/components/ui/scroll-area';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import {
   Home,
   Truck,
   Lightbulb,
   Wifi,
-  Shield,
-  Tool,
-  Search,
-  Filter,
-  Plus,
-  BarChart2,
-  Users,
-  Layout,
-  ListChecks,
-  ClipboardCheck,
+  Shield, BarChart2, Layout
 } from 'lucide-react';
-import { toast } from 'sonner';
 import Link from 'next/link';
-import { ServiceCard } from './components/services/ServiceCard';
 import { HomeAnalyticsChart } from './components/analytics/HomeAnalyticsChart';
 
 type Service = {
@@ -43,7 +30,7 @@ type Service = {
   icon?: any;
 };
 
-const homeServices = [
+const homeServices: Service[] = [
   {
     id: 1,
     name: 'Energy Services',
@@ -80,7 +67,6 @@ const homeServices = [
 
 const HomeDashboard = () => {
   const [services, setServices] = React.useState<Service[]>(homeServices);
-  const [searchQuery, setSearchQuery] = React.useState('');
 
   return (
     <div className="container mx-auto p-6 space-y-6">

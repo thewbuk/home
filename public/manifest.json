@@ -1,6 +1,6 @@
 {
-  "name": "Lyra",
-  "short_name": "Lyra",
+  "name": "home",
+  "short_name": "home",
   "icons": [
     {
       "src": "windows11/SmallTile.scale-100.png",
