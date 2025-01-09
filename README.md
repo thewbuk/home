@@ -21,17 +21,4 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Development Guidelines
 
-- TypeScript for type safety
-- App Router architecture
-- React function components (no React.FC)
-- Types instead of interfaces
-- React imports using `import * as React from 'react'`
-
-## Scripts
-
-- `pnpm dev` - Start development server
-- `pnpm build` - Build for production
-- `pnpm start` - Start production server
-- `pnpm lint` - Run linting
