@@ -1,4 +1,3 @@
-import { siteConfig } from '@/config/site';
 import type { Metadata, Viewport } from 'next';
 import { Space_Grotesk as SpaceGrotesk } from 'next/font/google';
 import { Footer } from '@/components/footer';
@@ -20,13 +19,6 @@ export const viewport: Viewport = {
   ],
 };
 
-export const metadata: Metadata = {
-  title: {
-    default: siteConfig.name,
-    template: `%s - ${siteConfig.name}`,
-  },
-  description: siteConfig.description,
-};
 
 export default function RootLayout({
   children,
