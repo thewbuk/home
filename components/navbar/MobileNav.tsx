@@ -8,16 +8,13 @@ import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Icons } from '@/components/common/icons';
-import { supabase } from '@/lib/supabaseClient';
-import { SignedIn, SignedOut, useClerk, useUser } from '@clerk/nextjs';
+
 
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 export function MobileNav() {
   const [open, setOpen] = React.useState(false);
-  const router = useRouter();
-  const { user } = useUser();
-  const { signOut } = useClerk();
+
 
 
   return (

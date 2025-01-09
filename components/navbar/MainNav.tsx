@@ -1,31 +1,14 @@
 'use client';
-import { Youtube, Home, List, Book, Tv, Plus, Coins } from 'lucide-react';
+import { Home } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
+  NavigationMenuLink
 } from '@/components/ui/navigation-menu';
 import * as React from 'react';
-import { supabase } from '@/lib/supabaseClient';
 
-type Category = {
-  id: number;
-  name: string;
-  description: string;
-};
-
-type MainNavProps = {
-  categories: Category[];
-};
-
-export function MainNav({ categories }: MainNavProps) {
+export function MainNav() {
   const router = useRouter();
 
 

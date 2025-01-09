@@ -10,7 +10,6 @@ import { Toaster } from 'sonner';
 
 import '@/styles/globals.css';
 import { SiteHeader } from '@/components/navbar/SiteHeader';
-import { ClerkProvider } from '@clerk/nextjs';
 
 const spaceGrotesk = SpaceGrotesk({ subsets: ['latin'] });
 
@@ -61,23 +60,6 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen bg-background font-sans antialiased">
         <Analytics />
-        <ClerkProvider
-          appearance={{
-            variables: { colorPrimary: '#000000' },
-            elements: {
-              formButtonPrimary:
-                'bg-black border border-black border-solid hover:bg-white hover:text-black',
-              socialButtonsBlockButton:
-                'bg-white border-gray-200 hover:bg-transparent hover:border-black text-gray-600 hover:text-black',
-              socialButtonsBlockButtonText: 'font-semibold',
-              formButtonReset:
-                'bg-white border border-solid border-gray-200 hover:bg-transparent hover:border-black text-gray-500 hover:text-black',
-              membersPageInviteButton:
-                'bg-black border border-black border-solid hover:bg-white hover:text-black',
-              card: 'bg-[#fafafa]',
-            },
-          }}
-        >
           <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
             <NextTopLoader
               color="#2299DD"
@@ -98,7 +80,6 @@ export default function RootLayout({
             <TailwindIndicator />
             <Toaster />
           </ThemeProvider>
-        </ClerkProvider>
       </body>
     </html>
   );
